@@ -1,0 +1,8 @@
+iq OR ip -> ir
+x RSHIFT 2 -> y
+fq OR fr -> fs
+bn RSHIFT 5 -> bq
+0 -> c
+14146 -> b
+d OR j -> k
+z OR aa -> ab
