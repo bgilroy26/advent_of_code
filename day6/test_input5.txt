@@ -1,8 +1,0 @@
-turn on 0,0 through 0,999
-turn on 3,0 through 3,999
-turn off 0,1 through 0,6
-turn off 3,3 through 3,8
-toggle 1,5 through 1,20
-toggle 1,25 through 1,40
-toggle 2,10 through 2,25
-toggle 2,30 through 2,45

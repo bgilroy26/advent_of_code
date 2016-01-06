@@ -1,2 +1,0 @@
-turn on 489,959 through 759,964
-turn off 820,516 through 871,914

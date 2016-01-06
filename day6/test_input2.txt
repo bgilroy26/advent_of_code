@@ -1,2 +1,0 @@
-turn on 0,0 through 0,999
-turn on 3,0 through 3,999
