@@ -15,10 +15,22 @@ true_aunt_stats = {
     'perfumes': 1
 }
 
+def mfcsam_test(key, true_aunt_stat, aunt_trait):
+    #retro-encabulator
+    higher = ['cats', 'trees']
+    lower = ['pomeranians', 'goldfish']
+    if key in higher:
+        return true_aunt_stat > aunt_trait
+    if key in lower:
+        return true_aunt_stat < aunt_trait
+    return true_aunt_stat != aunt_trait
+
 with sys.stdin as f:
     aunt_data = f.readlines()
 
 aunts = {}
+aunts_with_potential = []
+
 for aunt_desc in aunt_data:
     words = aunt_desc.split(' ')
     aunt_name = "{0}_{1}".format(words[0], words[1][:-1])
@@ -29,7 +41,15 @@ for aunt_desc in aunt_data:
 
     aunts[aunt_name] = demjson.decode(aunt_dict_string)
 
-pprint.pprint(aunts)
+for name, aunt in aunts.items():
+    for key, aunt_trait in aunt.items():
+        not_aunt = False
+        if mfcsam_test(key, true_aunt_stats[key], aunt_trait):
+            not_aunt = True
+            break
+            
+    
+    if not not_aunt:
+        aunts_with_potential.append(name)
 
-
-
+pprint.pprint(aunts_with_potential)
